@@ -8,5 +8,5 @@ fs.appendFileSync('notes.txt','This file was created by node.js.')
 fs.appendFileSync('notes.txt','My name is Adarsh');
 
 
-const sum=add(4,70);
+const sum=add(4,7);
 console.log(sum);
