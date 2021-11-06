@@ -1,6 +1,7 @@
 const fs=require('fs')
 const add =require('./utils.js');
 const val=require('Validator');
+const { url } = require('inspector');
 
 fs.writeFileSync('note.txt','This file was created by node.js.')
 fs.writeFileSync('note.txt','My name is Adarsh');
@@ -17,7 +18,8 @@ const data = {
     name: 'John Doe',
     company: 'Example Co.',
     birthday: '1985-04-16',
-    // email:'abc@gmail.com'
+    email:'abc@gmail.com',
+    url:'https://mail.google.com',
 };
 
 const rules = {
@@ -25,7 +27,8 @@ const rules = {
     // for multiple rules
     birthday: 'required|date', // can be a piped string
     company: ['required', 'string'], // can be an array of strings
-    email:['email','required']
+    email:['email','required'],
+    url:'url'
 };
 
 const messages = {
